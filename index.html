@@ -1,197 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BlueWave Tech</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #e8f0fe;
-      color: #333;
-    }
-    header {
-      background: #1a73e8;
-      color: white;
-      padding: 30px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-    header img {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid white;
-    }
-    nav {
-      background: #174ea6;
-      padding: 12px;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-      padding: 8px 14px;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background: #1a73e8;
-    }
-    section {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      margin-top: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-      display: none;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .active {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #dce6f9;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-    .card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-    .projects-img {
-      width: 100%;
-      border-radius: 12px;
-      margin: 15px 0;
-      height: 280px;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #1a73e8;
-      color: white;
-      margin-top: 30px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <!-- VIDEO DE FONDO -->
-  <video autoplay muted loop playsinline class="header-video">
-    <source src="videos/header.mp4" type="video/mp4">
-  </video>
 
+<body>
+
+  <!-- HEADER CON VIDEO DE FONDO -->
   <header>
+    <video autoplay muted loop playsinline class="header-video">
+      <source src="videos/header.mp4" type="video/mp4">
+    </video>
+
     <img src="images/logo.jpg" alt="Logo">
     <h1>BlueWave Tech</h1>
     <p>Innovación, desarrollo y soluciones tecnológicas a medida</p>
   </header>
 
+  <!-- MENÚ -->
   <nav>
-    <a onclick="showPage('inicio')">Inicio</a>
-    <a onclick="showPage('servicios')">Servicios</a>
-    <a onclick="showPage('proyectos')">Proyectos</a>
-    <a onclick="showPage('contacto')">Contacto</a>
+    <ul>
+      <li><a href="#" data-section="inicio" class="active">Inicio</a></li>
+      <li><a href="#" data-section="servicios">Servicios</a></li>
+      <li><a href="#" data-section="proyectos">Proyectos</a></li>
+      <li><a href="#" data-section="contacto">Contacto</a></li>
+    </ul>
   </nav>
 
-  <section id="inicio" class="active">
-    <h2>Bienvenido a BlueWave Tech</h2>
-    <img class="projects-img" src="images/header.jpg" alt="Tecnología">
-    <p>
-      Somos una empresa dedicada al desarrollo de páginas web informativas, modernas, optimizadas y con enfoque profesional.
-      Trabajamos con tecnologías actuales, priorizando la velocidad, diseño y experiencia del usuario.
-    </p>
+  <!-- SECCIÓN DE INICIO -->
+  <section id="inicio" class="section active">
+    <img src="images/seccion.jpg" class="hero-img" alt="Imagen Principal">
+    <p>Bienvenido a BlueWave Tech. Ofrecemos soluciones tecnológicas modernas y eficientes.</p>
   </section>
 
-  <section id="servicios">
+  <!-- SECCIÓN DE SERVICIOS -->
+  <section id="servicios" class="section">
     <h2>Servicios</h2>
-    <div class="services">
+    <div class="cards">
       <div class="card">
-        <img src="images/seccion.jpg" alt="Servicio 1">
+        <img src="images/seccion1.jpg" alt="Servicio 1">
         <h3>Desarrollo Web</h3>
-        <p>Diseño y construcción de sitios informativos, corporativos y modernos.</p>
+        <p>Aplicaciones rápidas, modernas y seguras.</p>
       </div>
+
       <div class="card">
-        <img src="images/seccion1.jpg" alt="Servicio 2">
-        <h3>SEO y Optimización</h3>
-        <p>Mejoramos tu visibilidad en buscadores y el rendimiento general de tu sitio.</p>
+        <img src="images/seccion4.jpg" alt="Servicio 2">
+        <h3>Automatización</h3>
+        <p>Soluciones con Arduino y sensores.</p>
       </div>
+
       <div class="card">
-        <img src="images/seccion4.jpg" alt="Servicio 3">
-        <h3>Mantenimiento</h3>
-        <p>Actualizaciones, mejoras y soporte técnico continuo.</p>
+        <img src="images/seccion.jpg" alt="Servicio 3">
+        <h3>Consultoría Tecnológica</h3>
+        <p>Optimización y mantenimiento de sistemas.</p>
       </div>
     </div>
   </section>
 
-  <section id="proyectos">
-  <h2>Proyectos Realizados</h2>
+  <!-- SECCIÓN DE PROYECTOS (EN BLOQUES COMO SERVICIOS) -->
+  <section id="proyectos" class="section">
+    <h2>Proyectos Realizados</h2>
 
-  <div class="project-images">
-      <img class="projects-img" src="images/seccion2.jpg" alt="Proyecto 1">
-      <img class="projects-img" src="images/seccion3.jpg" alt="Proyecto 2">
-  </div>
+    <div class="cards">
+      <div class="card">
+        <img src="images/seccion2.jpg" alt="Proyecto 1">
+        <h3>Proyecto 1</h3>
+        <p>Sitio corporativo para servicios profesionales.</p>
+      </div>
 
-  <ul>
-    <li>Sitio corporativo para servicios profesionales.</li>
-    <li>Página informativa para emprendimiento local.</li>
-  </ul>
-</section>
+      <div class="card">
+        <img src="images/seccion3.jpg" alt="Proyecto 2">
+        <h3>Proyecto 2</h3>
+        <p>Página informativa para emprendimiento local.</p>
+      </div>
+    </div>
+  </section>
 
-  <section id="contacto">
+  <!-- SECCIÓN DE CONTACTO -->
+  <section id="contacto" class="section">
     <h2>Contacto</h2>
-    <p>Correo: info@bluewavetech.com</p>
-    <p>Teléfono: +593 992 358 147</p>
-    <form>
-      <label>Nombre:</label><br>
-      <input type="text" style="width:100%;padding:10px;margin-bottom:10px;">
-      <label>Correo:</label><br>
-      <input type="email" style="width:100%;padding:10px;margin-bottom:10px;">
-      <label>Mensaje:</label><br>
-      <textarea style="width:100%;padding:10px;height:120px"></textarea><br>
-      <button style="margin-top:10px;padding:10px 20px;background:#1a73e8;color:white;border:none;border-radius:6px;cursor:pointer;">Enviar</button>
+    <form class="contact-form">
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo" required>
+      <textarea placeholder="Mensaje" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
     </form>
   </section>
 
-  <footer>
-    <p>© 2024 BlueWave Tech - Todos los derechos reservados.</p>
-  </footer>
-
-  <script>
-    function showPage(pageId) {
-      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-      const activePage = document.getElementById(pageId);
-      activePage.classList.add('active');
-      window.scrollTo(0, 0);
-    }
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
