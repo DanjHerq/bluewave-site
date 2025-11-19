@@ -79,14 +79,19 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       transition: 0.3s;
     }
-    .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
-    .hero-img {
+    .projects-img {
       width: 100%;
       border-radius: 12px;
-      margin: 20px 0;
+      margin: 15px 0;
+      height: 280px;
+      object-fit: cover;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     footer {
@@ -114,7 +119,7 @@
 
   <section id="inicio" class="active">
     <h2>Bienvenido a BlueWave Tech</h2>
-    <img class="hero-img" src="images/header.jpg" alt="Tecnología">
+    <img class="projects-img" src="images/header.jpg" alt="Tecnología">
     <p>
       Somos una empresa dedicada al desarrollo de páginas web informativas, modernas, optimizadas y con enfoque profesional.
       Trabajamos con tecnologías actuales, priorizando la velocidad, diseño y experiencia del usuario.
@@ -123,17 +128,19 @@
 
   <section id="servicios">
     <h2>Servicios</h2>
-    <img class="hero-img" src="images/seccion.jpg" alt="Servicios Tech">
     <div class="services">
       <div class="card">
+        <img src="images/seccion.jpg" alt="Servicio 1">
         <h3>Desarrollo Web</h3>
-        <p>Diseño y construcción de sitios informativos, corporativos y de presentación totalmente adaptables.</p>
+        <p>Diseño y construcción de sitios informativos, corporativos y modernos.</p>
       </div>
       <div class="card">
+        <img src="images/seccion1.jpg" alt="Servicio 2">
         <h3>SEO y Optimización</h3>
         <p>Mejoramos tu visibilidad en buscadores y el rendimiento general de tu sitio.</p>
       </div>
       <div class="card">
+        <img src="images/seccion4.jpg" alt="Servicio 3">
         <h3>Mantenimiento</h3>
         <p>Actualizaciones, mejoras y soporte técnico continuo.</p>
       </div>
@@ -142,19 +149,27 @@
 
   <section id="proyectos">
     <h2>Proyectos Realizados</h2>
-    <img class="hero-img" src="images/seccion2.jpg" alt="Proyectos Web">
+    <img class="projects-img" src="images/seccion2.jpg" alt="Proyecto 1">
+    <img class="projects-img" src="images/seccion3.jpg" alt="Proyecto 2">
     <ul>
-      <li>Landing page para consultora empresarial.</li>
-      <li>Página informativa para emprendimiento local.</li>
       <li>Sitio corporativo para servicios profesionales.</li>
+      <li>Página informativa para emprendimiento local.</li>
     </ul>
   </section>
 
   <section id="contacto">
     <h2>Contacto</h2>
-    <img class="hero-img" src="images/seccion3.jpg" alt="Contacto">
     <p>Correo: info@bluewavetech.com</p>
     <p>Teléfono: +593 999 999 999</p>
+    <form>
+      <label>Nombre:</label><br>
+      <input type="text" style="width:100%;padding:10px;margin-bottom:10px;">
+      <label>Correo:</label><br>
+      <input type="email" style="width:100%;padding:10px;margin-bottom:10px;">
+      <label>Mensaje:</label><br>
+      <textarea style="width:100%;padding:10px;height:120px"></textarea><br>
+      <button style="margin-top:10px;padding:10px 20px;background:#1a73e8;color:white;border:none;border-radius:6px;cursor:pointer;">Enviar</button>
+    </form>
   </section>
 
   <footer>
