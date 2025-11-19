@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueWave Tech</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo BlueWave">
+            <h1>BlueWave Tech</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" data-section="home" class="active">Inicio</a></li>
+                <li><a href="#" data-section="services">Servicios</a></li>
+                <li><a href="#" data-section="projects">Proyectos</a></li>
+                <li><a href="#" data-section="contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Página de INICIO -->
+        <section id="home" class="section active">
+            <img src="images/banner.jpg" class="hero-img">
+            <h2>Soluciones Tecnológicas Modernas</h2>
+            <p>Desarrollamos sitios web profesionales, rápidos, seguros y enfocados en resultados.</p>
+        </section>
+
+        <!-- Página de SERVICIOS -->
+        <section id="services" class="section">
+            <h2>Nuestros Servicios</h2>
+            <div class="cards">
+
+                <div class="card">
+                    <img src="images/service1.jpg">
+                    <h3>Desarrollo Web</h3>
+                    <p>Construimos páginas modernas, responsivas y elegantes para tu negocio.</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/service2.jpg">
+                    <h3>Optimización SEO</h3>
+                    <p>Mejoramos tu presencia digital para atraer más clientes diariamente.</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/service3.jpg">
+                    <h3>Soporte Técnico</h3>
+                    <p>Asistencia profesional para resolver problemas tecnológicos de manera rápida.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Página de PROYECTOS -->
+        <section id="projects" class="section">
+            <h2>Proyectos Realizados</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <img src="images/project1.jpg">
+                    <h3>Landing Page Empresarial</h3>
+                    <p>Diseño profesional y funcional para una empresa de seguridad privada.</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/project2.jpg">
+                    <h3>Sitio Informativo</h3>
+                    <p>Página moderna y ligera para empresa de servicios tecnológicos.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Página de CONTACTO -->
+        <section id="contact" class="section">
+            <h2>Contacto</h2>
+            <p>Puedes comunicarte con nosotros a través del siguiente formulario:</p>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu correo" required>
+                <textarea placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <script>
+        // Animaciones suaves entre secciones
+        const links = document.querySelectorAll("nav a");
+        const sections = document.querySelectorAll(".section");
+
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+
+                links.forEach(l => l.classList.remove("active"));
+                link.classList.add("active");
+
+                const target = link.getAttribute("data-section");
+
+                sections.forEach(section => {
+                    section.classList.remove("active");
+                    if (section.id === target) {
+                        section.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
