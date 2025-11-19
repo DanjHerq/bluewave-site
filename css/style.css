@@ -1,27 +1,35 @@
 /* === ESTILOS GENERALES === */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url("images/body.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: #333;
-    transition: background 0.3s ease;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("images/body.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #333;
 }
 
 
 /* === HEADER === */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #0059c9;
-    padding: 15px 40px;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  position: relative;
+  overflow: hidden;
+  height: 280px; /* Ajusta si quieres más o menos altura */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Para que quede detrás del texto */
 }
 
 .logo {
@@ -146,19 +154,4 @@ nav a.active {
     border-radius: 10px;
     object-fit: cover;
 }
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-}
 
-.video-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.5);
-}
