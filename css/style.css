@@ -144,3 +144,16 @@ nav a.active {
 .contact-form button:hover {
   background: #003f91;
 }
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #003f91;
+  color: white;
+  margin-top: 40px;
+}
+
+#contacto p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
