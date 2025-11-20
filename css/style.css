@@ -34,8 +34,10 @@ header {
 
 /* === LOGO === */
 header img {
-  width: 85px;
-  margin-bottom: 15px;
+  width: 120px; /* ajusta según lo que necesites */
+  max-width: 100%;
+  height: auto; /* mantiene proporciones */
+  margin-bottom: 10px;
 }
 
 /* === NAV === */
@@ -81,10 +83,11 @@ nav a.active {
 /* === IMAGEN PRINCIPAL === */
 .hero-img {
   width: 100%;
-  max-height: 350px;
-  object-fit: cover;
+  height: auto; /* mantiene proporción original */
+  max-height: 350px; /* opcional, si quieres limitar la altura */
   border-radius: 10px;
   margin-bottom: 20px;
+  object-fit: contain; /* mantiene toda la imagen dentro del contenedor */
 }
 
 /* === TARJETAS === */
